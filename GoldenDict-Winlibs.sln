@@ -25,6 +25,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "libvorbisfile", "libvorbis\
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "libvorbis", "libvorbis\win32\VS2012\libvorbis\libvorbis_dynamic.vcxproj", "{3A214E06-B95E-4D61-A291-1F8DF2EC10FD}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "libao", "libao\libao.vcxproj", "{EE3035CB-D9F1-4C08-8493-43D6973DEBAB}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Win32 = Debug|Win32
@@ -113,6 +115,13 @@ Global
 		{3A214E06-B95E-4D61-A291-1F8DF2EC10FD}.Release|Win32.Build.0 = Release|Win32
 		{3A214E06-B95E-4D61-A291-1F8DF2EC10FD}.Release|x64.ActiveCfg = Release|x64
 		{3A214E06-B95E-4D61-A291-1F8DF2EC10FD}.Release|x64.Build.0 = Release|x64
+		{EE3035CB-D9F1-4C08-8493-43D6973DEBAB}.Debug|Win32.ActiveCfg = Debug|Win32
+		{EE3035CB-D9F1-4C08-8493-43D6973DEBAB}.Debug|Win32.Build.0 = Debug|Win32
+		{EE3035CB-D9F1-4C08-8493-43D6973DEBAB}.Debug|x64.ActiveCfg = Debug|Win32
+		{EE3035CB-D9F1-4C08-8493-43D6973DEBAB}.Release|Win32.ActiveCfg = Release|Win32
+		{EE3035CB-D9F1-4C08-8493-43D6973DEBAB}.Release|Win32.Build.0 = Release|Win32
+		{EE3035CB-D9F1-4C08-8493-43D6973DEBAB}.Release|x64.ActiveCfg = Release|x64
+		{EE3035CB-D9F1-4C08-8493-43D6973DEBAB}.Release|x64.Build.0 = Release|x64
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
