@@ -19,6 +19,9 @@
  */
 
 #include <iconv.h>
+#ifndef ICONV_CONST
+# define ICONV_CONST
+#endif
 
 #include <stdlib.h>
 #include <string.h>
@@ -424,7 +427,7 @@ void iconvlist (int (*do_one) (unsigned int namescount,
         namesbuf[i++] = aliasbuf[j++].name;
       while (j < num_aliases && aliasbuf[j].encoding_index == ei);
       if (i > 1)
-        qsort(namesbuf, i, sizeof(const char *), compare_by_name);
+        qsort((char *)namesbuf, i, sizeof(const char *), compare_by_name);
       /* Call the callback. */
       if (do_one(i,namesbuf,data))
         break;
