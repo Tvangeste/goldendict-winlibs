@@ -11,6 +11,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "simple", "lzo\simple.vcxpro
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "libbz2", "bzip2\libbz2.vcxproj", "{5F9DC0F6-878C-44D8-A42B-B28F0AF9BAB6}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "libz", "zlib\contrib\vstudio\vc11\zlibvc.vcxproj", "{8FD826F8-3739-44E6-8CC8-997122E53B8D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Win32 = Debug|Win32
@@ -51,6 +53,14 @@ Global
 		{5F9DC0F6-878C-44D8-A42B-B28F0AF9BAB6}.Release|Win32.Build.0 = Release|Win32
 		{5F9DC0F6-878C-44D8-A42B-B28F0AF9BAB6}.Release|x64.ActiveCfg = Release|x64
 		{5F9DC0F6-878C-44D8-A42B-B28F0AF9BAB6}.Release|x64.Build.0 = Release|x64
+		{8FD826F8-3739-44E6-8CC8-997122E53B8D}.Debug|Win32.ActiveCfg = Debug|Win32
+		{8FD826F8-3739-44E6-8CC8-997122E53B8D}.Debug|Win32.Build.0 = Debug|Win32
+		{8FD826F8-3739-44E6-8CC8-997122E53B8D}.Debug|x64.ActiveCfg = Debug|x64
+		{8FD826F8-3739-44E6-8CC8-997122E53B8D}.Debug|x64.Build.0 = Debug|x64
+		{8FD826F8-3739-44E6-8CC8-997122E53B8D}.Release|Win32.ActiveCfg = Release|Win32
+		{8FD826F8-3739-44E6-8CC8-997122E53B8D}.Release|Win32.Build.0 = Release|Win32
+		{8FD826F8-3739-44E6-8CC8-997122E53B8D}.Release|x64.ActiveCfg = Release|x64
+		{8FD826F8-3739-44E6-8CC8-997122E53B8D}.Release|x64.Build.0 = Release|x64
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

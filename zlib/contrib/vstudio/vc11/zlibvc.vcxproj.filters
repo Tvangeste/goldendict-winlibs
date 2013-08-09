@@ -1,0 +1,67 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="..\..\..\adler32.c" />
+    <ClCompile Include="..\..\..\compress.c" />
+    <ClCompile Include="..\..\..\crc32.c" />
+    <ClCompile Include="..\..\..\deflate.c" />
+    <ClCompile Include="..\..\..\gzclose.c" />
+    <ClCompile Include="..\..\..\gzlib.c" />
+    <ClCompile Include="..\..\..\gzread.c" />
+    <ClCompile Include="..\..\..\gzwrite.c" />
+    <ClCompile Include="..\..\..\infback.c" />
+    <ClCompile Include="..\..\masmx64\inffas8664.c" />
+    <ClCompile Include="..\..\..\inffast.c" />
+    <ClCompile Include="..\..\..\inflate.c" />
+    <ClCompile Include="..\..\..\inftrees.c" />
+    <ClCompile Include="..\..\minizip\ioapi.c" />
+    <ClCompile Include="..\..\minizip\iowin32.c" />
+    <ClCompile Include="..\..\..\trees.c" />
+    <ClCompile Include="..\..\..\uncompr.c" />
+    <ClCompile Include="..\..\minizip\unzip.c" />
+    <ClCompile Include="..\..\minizip\zip.c" />
+    <ClCompile Include="..\..\..\zutil.c" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\..\deflate.h" />
+    <ClInclude Include="..\..\..\infblock.h" />
+    <ClInclude Include="..\..\..\infcodes.h" />
+    <ClInclude Include="..\..\..\inffast.h" />
+    <ClInclude Include="..\..\..\inftrees.h" />
+    <ClInclude Include="..\..\..\infutil.h" />
+    <ClInclude Include="..\..\..\zconf.h" />
+    <ClInclude Include="..\..\..\zlib.h" />
+    <ClInclude Include="..\..\..\zutil.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="zlib.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="zlibvc.def" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Assembler Files">
+      <UniqueIdentifier>{4b03b462-1b1d-405e-b2d7-f7502c67dd2c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Assembler Files\x64">
+      <UniqueIdentifier>{d317c472-4788-49d7-80e1-7bffb394b0e4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Assembler Files\x32">
+      <UniqueIdentifier>{21bc0c96-c18e-43e2-ab7d-d4270fb314de}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <MASM Include="..\..\masmx64\gvmat64.asm">
+      <Filter>Assembler Files\x64</Filter>
+    </MASM>
+    <MASM Include="..\..\masmx64\inffasx64.asm">
+      <Filter>Assembler Files\x64</Filter>
+    </MASM>
+    <MASM Include="..\..\masmx86\inffas32.asm">
+      <Filter>Assembler Files\x32</Filter>
+    </MASM>
+    <MASM Include="..\..\masmx86\match686.asm">
+      <Filter>Assembler Files\x32</Filter>
+    </MASM>
+  </ItemGroup>
+</Project>
