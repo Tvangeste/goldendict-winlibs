@@ -33,6 +33,9 @@
 #include <windows.h>
 #include <mmreg.h>
 #include <mmsystem.h>
+#ifdef _MSC_VER
+#include <ks.h>
+#endif
 #include <ksmedia.h>
 
 #include <stdlib.h>
