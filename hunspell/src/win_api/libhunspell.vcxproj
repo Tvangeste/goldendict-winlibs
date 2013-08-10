@@ -29,12 +29,14 @@
     <PlatformToolset>v110</PlatformToolset>
     <UseOfMfc>false</UseOfMfc>
     <CharacterSet>Unicode</CharacterSet>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
     <ConfigurationType>DynamicLibrary</ConfigurationType>
     <PlatformToolset>v110</PlatformToolset>
     <UseOfMfc>false</UseOfMfc>
     <CharacterSet>Unicode</CharacterSet>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
     <ConfigurationType>DynamicLibrary</ConfigurationType>
@@ -105,8 +107,7 @@
       </PrecompiledHeader>
       <ProgramDataBaseFileName>$(IntDir)$(ProjectName).pdb</ProgramDataBaseFileName>
       <WarningLevel>Level4</WarningLevel>
-      <DebugInformationFormat>
-      </DebugInformationFormat>
+      <DebugInformationFormat>None</DebugInformationFormat>
       <DisableSpecificWarnings>4706;%(DisableSpecificWarnings)</DisableSpecificWarnings>
     </ClCompile>
     <Lib>
@@ -118,6 +119,7 @@
     </PostBuildEvent>
     <Link>
       <ImportLibrary>$(OutDir)$(BASE_LIBRARY_NAME).lib</ImportLibrary>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
@@ -132,8 +134,7 @@
       </PrecompiledHeader>
       <ProgramDataBaseFileName>$(IntDir)$(ProjectName).pdb</ProgramDataBaseFileName>
       <WarningLevel>Level4</WarningLevel>
-      <DebugInformationFormat>
-      </DebugInformationFormat>
+      <DebugInformationFormat>None</DebugInformationFormat>
       <DisableSpecificWarnings>4706;%(DisableSpecificWarnings)</DisableSpecificWarnings>
     </ClCompile>
     <Lib>
@@ -145,6 +146,7 @@
     </PostBuildEvent>
     <Link>
       <ImportLibrary>$(OutDir)$(BASE_LIBRARY_NAME).lib</ImportLibrary>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">

@@ -151,8 +151,7 @@
       <PrecompiledHeader>
       </PrecompiledHeader>
       <WarningLevel>Level4</WarningLevel>
-      <DebugInformationFormat>
-      </DebugInformationFormat>
+      <DebugInformationFormat>None</DebugInformationFormat>
       <CompileAs>CompileAsC</CompileAs>
       <DisableSpecificWarnings>4244;%(DisableSpecificWarnings)</DisableSpecificWarnings>
       <CallingConvention>Cdecl</CallingConvention>
@@ -160,6 +159,7 @@
     <Link>
       <ModuleDefinitionFile>..\ogg.def</ModuleDefinitionFile>
       <ImportLibrary>$(OutDir)$(BASE_LIBRARY_NAME).lib</ImportLibrary>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
@@ -181,8 +181,7 @@
       <PrecompiledHeader>
       </PrecompiledHeader>
       <WarningLevel>Level4</WarningLevel>
-      <DebugInformationFormat>
-      </DebugInformationFormat>
+      <DebugInformationFormat>None</DebugInformationFormat>
       <CompileAs>CompileAsC</CompileAs>
       <DisableSpecificWarnings>4244;%(DisableSpecificWarnings)</DisableSpecificWarnings>
       <CallingConvention>Cdecl</CallingConvention>
@@ -190,6 +189,7 @@
     <Link>
       <ModuleDefinitionFile>..\ogg.def</ModuleDefinitionFile>
       <ImportLibrary>$(OutDir)$(BASE_LIBRARY_NAME).lib</ImportLibrary>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>

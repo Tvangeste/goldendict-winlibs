@@ -151,7 +151,7 @@
       <BufferSecurityCheck>false</BufferSecurityCheck>
       <PrecompiledHeader />
       <WarningLevel>Level3</WarningLevel>
-      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <DebugInformationFormat>None</DebugInformationFormat>
       <CompileAs>CompileAsC</CompileAs>
     </ClCompile>
     <Link>
@@ -182,7 +182,7 @@
       <PrecompiledHeader>
       </PrecompiledHeader>
       <WarningLevel>Level3</WarningLevel>
-      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <DebugInformationFormat>None</DebugInformationFormat>
       <CompileAs>CompileAsC</CompileAs>
     </ClCompile>
     <Link>

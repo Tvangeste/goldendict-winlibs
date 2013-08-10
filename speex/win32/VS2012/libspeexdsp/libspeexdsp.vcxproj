@@ -128,7 +128,7 @@
       <BufferSecurityCheck>false</BufferSecurityCheck>
       <PrecompiledHeader />
       <WarningLevel>Level3</WarningLevel>
-      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <DebugInformationFormat>None</DebugInformationFormat>
       <CompileAs>CompileAsC</CompileAs>
       <DisableSpecificWarnings>4244;4305;4311;4100;4127;%(DisableSpecificWarnings)</DisableSpecificWarnings>
     </ClCompile>
@@ -150,7 +150,7 @@
       <PrecompiledHeader>
       </PrecompiledHeader>
       <WarningLevel>Level3</WarningLevel>
-      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <DebugInformationFormat>None</DebugInformationFormat>
       <CompileAs>CompileAsC</CompileAs>
       <DisableSpecificWarnings>4244;4305;4311;4100;4127;%(DisableSpecificWarnings)</DisableSpecificWarnings>
     </ClCompile>
