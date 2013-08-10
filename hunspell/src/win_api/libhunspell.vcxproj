@@ -53,15 +53,19 @@
   </ImportGroup>
   <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="hunspell.props" />
   </ImportGroup>
   <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="PropertySheets">
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="hunspell.props" />
   </ImportGroup>
   <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="hunspell.props" />
   </ImportGroup>
   <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="PropertySheets">
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="hunspell.props" />
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup>
@@ -70,22 +74,22 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <OutDir>$(SolutionDir)\$(Configuration)\$(Platform)\</OutDir>
     <IntDir>$(Configuration)\$(Platform)\</IntDir>
-    <LinkIncremental>true</LinkIncremental>
-    <TargetName>hunspell</TargetName>
+    <LinkIncremental>false</LinkIncremental>
+    <TargetName>$(BASE_LIBRARY_NAME)-gd-$(LIBRARY_VERSION)</TargetName>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
-    <LinkIncremental>true</LinkIncremental>
-    <TargetName>hunspell</TargetName>
+    <LinkIncremental>false</LinkIncremental>
+    <TargetName>$(BASE_LIBRARY_NAME)-gd-$(LIBRARY_VERSION)</TargetName>
     <OutDir>$(SolutionDir)\$(Configuration)\$(Platform)\</OutDir>
     <IntDir>$(Configuration)\$(Platform)\</IntDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <OutDir>$(SolutionDir)\$(Configuration)\$(Platform)\</OutDir>
     <IntDir>$(Configuration)\$(Platform)\</IntDir>
-    <TargetName>hunspell</TargetName>
+    <TargetName>$(BASE_LIBRARY_NAME)-gd-$(LIBRARY_VERSION)</TargetName>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
-    <TargetName>hunspell</TargetName>
+    <TargetName>$(BASE_LIBRARY_NAME)-gd-$(LIBRARY_VERSION)</TargetName>
     <OutDir>$(SolutionDir)\$(Configuration)\$(Platform)\</OutDir>
     <IntDir>$(Configuration)\$(Platform)\</IntDir>
   </PropertyGroup>
@@ -112,6 +116,9 @@
       <Command>
       </Command>
     </PostBuildEvent>
+    <Link>
+      <ImportLibrary>$(OutDir)$(BASE_LIBRARY_NAME).lib</ImportLibrary>
+    </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <ClCompile>
@@ -136,6 +143,9 @@
       <Command>
       </Command>
     </PostBuildEvent>
+    <Link>
+      <ImportLibrary>$(OutDir)$(BASE_LIBRARY_NAME).lib</ImportLibrary>
+    </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
@@ -159,6 +169,9 @@
       <Command>
       </Command>
     </PostBuildEvent>
+    <Link>
+      <ImportLibrary>$(OutDir)$(BASE_LIBRARY_NAME).lib</ImportLibrary>
+    </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <ClCompile>
@@ -182,6 +195,9 @@
       <Command>
       </Command>
     </PostBuildEvent>
+    <Link>
+      <ImportLibrary>$(OutDir)$(BASE_LIBRARY_NAME).lib</ImportLibrary>
+    </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="config.h" />

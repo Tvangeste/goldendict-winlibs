@@ -72,15 +72,19 @@
   </ImportGroup>
   <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="iconv.props" />
   </ImportGroup>
   <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="iconv.props" />
   </ImportGroup>
   <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="PropertySheets">
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="iconv.props" />
   </ImportGroup>
   <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="PropertySheets">
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="iconv.props" />
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup>
@@ -90,23 +94,25 @@
     <OutDir>$(SolutionDir)\$(Configuration)\$(Platform)\</OutDir>
     <IntDir>$(Configuration)\$(Platform)\</IntDir>
     <LinkIncremental>true</LinkIncremental>
-    <TargetName>iconv</TargetName>
+    <TargetName>$(BASE_LIBRARY_NAME)-gd-$(LIBRARY_VERSION)</TargetName>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <OutDir>$(SolutionDir)\$(Configuration)\$(Platform)\</OutDir>
     <IntDir>$(Configuration)\$(Platform)\</IntDir>
-    <TargetName>iconv</TargetName>
+    <TargetName>$(BASE_LIBRARY_NAME)-gd-$(LIBRARY_VERSION)</TargetName>
+    <LinkIncremental>false</LinkIncremental>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <OutDir>$(SolutionDir)\$(Configuration)\$(Platform)\</OutDir>
     <IntDir>$(Configuration)\$(Platform)\</IntDir>
     <LinkIncremental>true</LinkIncremental>
-    <TargetName>iconv</TargetName>
+    <TargetName>$(BASE_LIBRARY_NAME)-gd-$(LIBRARY_VERSION)</TargetName>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <OutDir>$(SolutionDir)\$(Configuration)\$(Platform)\</OutDir>
     <IntDir>$(Configuration)\$(Platform)\</IntDir>
-    <TargetName>iconv</TargetName>
+    <TargetName>$(BASE_LIBRARY_NAME)-gd-$(LIBRARY_VERSION)</TargetName>
+    <LinkIncremental>false</LinkIncremental>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <PreBuildEvent>
@@ -209,7 +215,7 @@
       </DataExecutionPrevention>
       <TargetMachine>MachineX86</TargetMachine>
       <ProgramDatabaseFile>$(OutDir)libiconv_debug.pdb</ProgramDatabaseFile>
-      <ImportLibrary>$(OutDir)iconv.lib</ImportLibrary>
+      <ImportLibrary>$(OutDir)$(BASE_LIBRARY_NAME).lib</ImportLibrary>
       <ImageHasSafeExceptionHandlers>false</ImageHasSafeExceptionHandlers>
     </Link>
     <PostBuildEvent>
@@ -304,7 +310,7 @@
       <DataExecutionPrevention>
       </DataExecutionPrevention>
       <TargetMachine>MachineX64</TargetMachine>
-      <ImportLibrary>$(OutDir)libiconv_debug.lib</ImportLibrary>
+      <ImportLibrary>$(OutDir)$(BASE_LIBRARY_NAME).lib</ImportLibrary>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -331,7 +337,7 @@
       <DataExecutionPrevention />
       <TargetMachine>MachineX86</TargetMachine>
       <ProgramDatabaseFile>$(OutDir)libiconv.pdb</ProgramDatabaseFile>
-      <ImportLibrary>$(OutDir)iconv.lib</ImportLibrary>
+      <ImportLibrary>$(OutDir)$(BASE_LIBRARY_NAME).lib</ImportLibrary>
     </Link>
     <PostBuildEvent>
       <Command>
@@ -364,7 +370,7 @@
       <RandomizedBaseAddress>false</RandomizedBaseAddress>
       <DataExecutionPrevention />
       <TargetMachine>MachineX64</TargetMachine>
-      <ImportLibrary>$(OutDir)libiconv.lib</ImportLibrary>
+      <ImportLibrary>$(OutDir)$(BASE_LIBRARY_NAME).lib</ImportLibrary>
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>

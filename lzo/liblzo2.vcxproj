@@ -49,42 +49,46 @@
   </ImportGroup>
   <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="lzo.props" />
   </ImportGroup>
   <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="PropertySheets">
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="lzo.props" />
   </ImportGroup>
   <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="lzo.props" />
   </ImportGroup>
   <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="PropertySheets">
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="lzo.props" />
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <LinkIncremental>true</LinkIncremental>
     <IncludePath>$(ProjectDir)\include;$(ProjectDir)\.;$(ProjectDir)\src;$(IncludePath)</IncludePath>
-    <TargetName>lzo2</TargetName>
+    <TargetName>$(BASE_LIBRARY_NAME)-gd-$(LIBRARY_VERSION)</TargetName>
     <OutDir>$(SolutionDir)\$(Configuration)\$(Platform)\</OutDir>
     <IntDir>$(Configuration)\$(Platform)\</IntDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <LinkIncremental>true</LinkIncremental>
     <IncludePath>$(ProjectDir)\include;$(ProjectDir)\.;$(ProjectDir)\src;$(IncludePath)</IncludePath>
-    <TargetName>lzo2</TargetName>
+    <TargetName>$(BASE_LIBRARY_NAME)-gd-$(LIBRARY_VERSION)</TargetName>
     <OutDir>$(SolutionDir)\$(Configuration)\$(Platform)\</OutDir>
     <IntDir>$(Configuration)\$(Platform)\</IntDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <LinkIncremental>false</LinkIncremental>
     <IncludePath>$(ProjectDir)\include;$(ProjectDir)\.;$(ProjectDir)\src;$(IncludePath)</IncludePath>
-    <TargetName>lzo2</TargetName>
+    <TargetName>$(BASE_LIBRARY_NAME)-gd-$(LIBRARY_VERSION)</TargetName>
     <OutDir>$(SolutionDir)\$(Configuration)\$(Platform)\</OutDir>
     <IntDir>$(Configuration)\$(Platform)\</IntDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <LinkIncremental>false</LinkIncremental>
     <IncludePath>$(ProjectDir)\include;$(ProjectDir)\.;$(ProjectDir)\src;$(IncludePath)</IncludePath>
-    <TargetName>lzo2</TargetName>
+    <TargetName>$(BASE_LIBRARY_NAME)-gd-$(LIBRARY_VERSION)</TargetName>
     <OutDir>$(SolutionDir)\$(Configuration)\$(Platform)\</OutDir>
     <IntDir>$(Configuration)\$(Platform)\</IntDir>
   </PropertyGroup>
@@ -102,6 +106,7 @@
       <SubSystem>Windows</SubSystem>
       <ModuleDefinitionFile>
       </ModuleDefinitionFile>
+      <ImportLibrary>$(OutDir)$(BASE_LIBRARY_NAME).lib</ImportLibrary>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
@@ -116,6 +121,7 @@
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <SubSystem>Windows</SubSystem>
       <ModuleDefinitionFile>$(ProjectDir)B\win64\vc_dll.def</ModuleDefinitionFile>
+      <ImportLibrary>$(OutDir)$(BASE_LIBRARY_NAME).lib</ImportLibrary>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -134,6 +140,7 @@
       <ModuleDefinitionFile>
       </ModuleDefinitionFile>
       <ImageHasSafeExceptionHandlers>true</ImageHasSafeExceptionHandlers>
+      <ImportLibrary>$(OutDir)$(BASE_LIBRARY_NAME).lib</ImportLibrary>
     </Link>
     <MASM>
       <MakeAllSymbolsPublic>false</MakeAllSymbolsPublic>
@@ -159,6 +166,7 @@
       <OptimizeReferences>true</OptimizeReferences>
       <ModuleDefinitionFile>$(ProjectDir)B\win64\vc_dll.def</ModuleDefinitionFile>
       <ImageHasSafeExceptionHandlers>false</ImageHasSafeExceptionHandlers>
+      <ImportLibrary>$(OutDir)$(BASE_LIBRARY_NAME).lib</ImportLibrary>
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>

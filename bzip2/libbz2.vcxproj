@@ -50,30 +50,34 @@
   <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
     <Import Project="$(VCTargetsPath)Microsoft.Cpp.UpgradeFromVC60.props" />
+    <Import Project="bzip2.props" />
   </ImportGroup>
   <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="PropertySheets">
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
     <Import Project="$(VCTargetsPath)Microsoft.Cpp.UpgradeFromVC60.props" />
+    <Import Project="bzip2.props" />
   </ImportGroup>
   <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
     <Import Project="$(VCTargetsPath)Microsoft.Cpp.UpgradeFromVC60.props" />
+    <Import Project="bzip2.props" />
   </ImportGroup>
   <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="PropertySheets">
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
     <Import Project="$(VCTargetsPath)Microsoft.Cpp.UpgradeFromVC60.props" />
+    <Import Project="bzip2.props" />
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <OutDir>$(SolutionDir)\$(Configuration)\$(Platform)\</OutDir>
-    <LinkIncremental>true</LinkIncremental>
-    <TargetName>bz2</TargetName>
+    <LinkIncremental>false</LinkIncremental>
+    <TargetName>$(BASE_LIBRARY_NAME)-gd-$(LIBRARY_VERSION)</TargetName>
     <TargetExt>.dll</TargetExt>
     <IntDir>$(Configuration)\$(Platform)\</IntDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
-    <LinkIncremental>true</LinkIncremental>
-    <TargetName>bz2</TargetName>
+    <LinkIncremental>false</LinkIncremental>
+    <TargetName>$(BASE_LIBRARY_NAME)-gd-$(LIBRARY_VERSION)</TargetName>
     <TargetExt>.dll</TargetExt>
     <OutDir>$(SolutionDir)\$(Configuration)\$(Platform)\</OutDir>
     <IntDir>$(Configuration)\$(Platform)\</IntDir>
@@ -82,12 +86,12 @@
     <OutDir>$(SolutionDir)\$(Configuration)\$(Platform)\</OutDir>
     <IntDir>$(Configuration)\$(Platform)\</IntDir>
     <LinkIncremental>true</LinkIncremental>
-    <TargetName>bz2</TargetName>
+    <TargetName>$(BASE_LIBRARY_NAME)-gd-$(LIBRARY_VERSION)</TargetName>
     <TargetExt>.dll</TargetExt>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <LinkIncremental>true</LinkIncremental>
-    <TargetName>bz2</TargetName>
+    <TargetName>$(BASE_LIBRARY_NAME)-gd-$(LIBRARY_VERSION)</TargetName>
     <TargetExt>.dll</TargetExt>
     <OutDir>$(SolutionDir)\$(Configuration)\$(Platform)\</OutDir>
     <IntDir>$(Configuration)\$(Platform)\</IntDir>
@@ -127,8 +131,7 @@
       <LinkDLL>true</LinkDLL>
       <GenerateDebugInformation>false</GenerateDebugInformation>
       <SubSystem>Windows</SubSystem>
-      <OutputFile>$(OutDir)$(TargetFileName)</OutputFile>
-      <ImportLibrary>$(OutDir)$(TargetName).lib</ImportLibrary>
+      <ImportLibrary>$(OutDir)$(BASE_LIBRARY_NAME).lib</ImportLibrary>
       <AdditionalDependencies>odbc32.lib;odbccp32.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <ModuleDefinitionFile>.\libbz2.def</ModuleDefinitionFile>
     </Link>
@@ -171,7 +174,7 @@
       <GenerateDebugInformation>false</GenerateDebugInformation>
       <SubSystem>Windows</SubSystem>
       <OutputFile>$(OutDir)$(TargetFileName)</OutputFile>
-      <ImportLibrary>$(OutDir)$(TargetName).lib</ImportLibrary>
+      <ImportLibrary>$(OutDir)$(BASE_LIBRARY_NAME).lib</ImportLibrary>
       <AdditionalDependencies>odbc32.lib;odbccp32.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <ModuleDefinitionFile>.\libbz2.def</ModuleDefinitionFile>
     </Link>
@@ -212,7 +215,7 @@
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <SubSystem>Windows</SubSystem>
       <OutputFile>$(OutDir)$(TargetFileName)</OutputFile>
-      <ImportLibrary>$(OutDir)$(TargetName).lib</ImportLibrary>
+      <ImportLibrary>$(OutDir)$(BASE_LIBRARY_NAME).lib</ImportLibrary>
       <AdditionalDependencies>odbc32.lib;odbccp32.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <ModuleDefinitionFile>.\libbz2.def</ModuleDefinitionFile>
     </Link>
@@ -255,7 +258,7 @@
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <SubSystem>Windows</SubSystem>
       <OutputFile>$(OutDir)$(TargetFileName)</OutputFile>
-      <ImportLibrary>$(OutDir)$(TargetName).lib</ImportLibrary>
+      <ImportLibrary>$(OutDir)$(BASE_LIBRARY_NAME).lib</ImportLibrary>
       <AdditionalDependencies>odbc32.lib;odbccp32.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <ModuleDefinitionFile>.\libbz2.def</ModuleDefinitionFile>
     </Link>

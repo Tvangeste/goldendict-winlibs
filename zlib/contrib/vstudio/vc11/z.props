@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ImportGroup Label="PropertySheets" />
+  <PropertyGroup Label="UserMacros">
+    <BASE_LIBRARY_NAME>z</BASE_LIBRARY_NAME>
+    <LIBRARY_VERSION>128</LIBRARY_VERSION>
+  </PropertyGroup>
+  <PropertyGroup />
+  <ItemDefinitionGroup />
+  <ItemGroup>
+    <BuildMacro Include="BASE_LIBRARY_NAME">
+      <Value>$(BASE_LIBRARY_NAME)</Value>
+    </BuildMacro>
+    <BuildMacro Include="LIBRARY_VERSION">
+      <Value>$(LIBRARY_VERSION)</Value>
+    </BuildMacro>
+  </ItemGroup>
+</Project>
